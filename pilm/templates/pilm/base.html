@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="{% firstof LANGUAGE_CODE 'en' %}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% load i18n %}
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
+    {% block extra-css %}{% endblock %}
+    {% block js %}{% endblock %}
+    {% block extra-js %}{% endblock %}
+    {% block extra-head %}{% endblock %}
+  </head>
+  <body>
+    <div class="middlebar">
+      <div class="container">
+      	<h1>/{{title}}</h1>
+        <hr/>
+        {% block content-header %}
+          {% if error %}<div class="error">{{ error }}</div>{% endif %}
+          {% if info %}<div class="info">{{ info }}</div>{% endif %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="info">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endblock %}
+        {% block content %}{% endblock %}
+        <br/>
+      </div>
+
+      <div id="sidebar" class="span-2 last">
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+	</div>
+	<div class="footer">
+		<div class="container">
+		</div>
+	</div>
+  </body>
+</html>

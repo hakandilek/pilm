@@ -1,0 +1,80 @@
+div.header > div, div.footer > div {
+   border-left:1px solid translarent;
+   border-right:1px solid translarent;
+   padding:8px 5px;
+   font-weight:bold;
+}
+
+div.footer > div {
+   border-left:1px solid translarent;
+   border-right:1px solid translarent;
+}
+
+div.topbar > div {
+   border-left:1px solid translarent;
+   border-right:1px solid translarent;
+   padding:24px 5px;
+   font-weight:bold;
+}
+
+.middlebar {
+   background: #FFFFFF;
+}
+
+select {padding:4px;}
+select:focus, select:focus {border-color:#333;}
+input[type=text], input[type=password], input[type=url], input[type=email], textarea {background-color:#fff;border:1px solid #999; color:#000;margin:0.5em 0.5em 0 0;}
+input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus {border-color:#333;}
+input[type=text], input[type=password], input[type=url], input[type=email] {width:320px;padding:5px;}
+form ul.holder { width: 320px; }
+
+a {
+   text-decoration: none;
+}
+
+.listheader {
+   min-width:80px;
+   text-align:center;
+}
+
+.step {padding:1.2em;margin-bottom:1em;}
+
+
+.panel {
+	position: absolute;
+	top: 560px;
+	left: 40px;
+	display: none;
+	background: none repeat scroll 0 0 rgba(20, 20, 20, 0.8);
+	border:1px solid #111111;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+	filter: alpha(opacity=85);
+	opacity: .85;
+}
+
+
+a.trigger{
+	position: absolute;
+	text-decoration: none;
+	top: 560px; left: 0;
+	font-size: 14px;
+	letter-spacing:-1px;
+	font-family: verdana, helvetica, arial, sans-serif;
+	color:#fff;
+	padding: 4px 8px 4px 4px;
+	font-weight: 400;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+	border:1px solid #444444;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	display: block;
+}

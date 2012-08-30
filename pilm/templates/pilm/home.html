@@ -1,0 +1,9 @@
+{% extends "common/base_site.html" %}
+{% load i18n %}
+{% block content %}
+<ul>
+	<li><a href="{% url home %}">home</a></li>
+	<li><a href="{% url pilm.views.file_index %}">files</a></li>
+</ul>
+{% endblock content %}
+

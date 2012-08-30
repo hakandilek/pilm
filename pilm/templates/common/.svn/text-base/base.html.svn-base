@@ -1,0 +1,12 @@
+{% extends "paylik/base.html" %}
+{% load i18n media %}
+{% block home_logo %}{% trans "Aylik" %}{% endblock %}
+{% block css %}
+	{% include_media 'main.css' 	  media='screen, projection' %}
+	{% include_media 'main_print.css' media='print' %}
+	<!--[if lt IE 8]>
+	{% include_media 'main_ie.css'    media='screen, projection' %}<![endif]-->
+{% endblock %}
+{% block js %}
+	{% include_media 'main.js' %}
+{% endblock %}

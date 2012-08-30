@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/paylik/!svn/ver/89/trunk/paylik-app/paylik/templates/common
+END
+base_site.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/paylik/!svn/ver/31/trunk/paylik-app/paylik/templates/common/base_site.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/paylik/!svn/ver/89/trunk/paylik-app/paylik/templates/common/base.html
+END
