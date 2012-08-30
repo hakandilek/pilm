@@ -1,6 +1,0 @@
-{% extends "common/base.html" %}
-{% load i18n %}
-
-{% block title %}{{ title }} | {% trans 'Aylik' %}{% endblock %}
-
-{% block nav-global %}{% endblock %}
