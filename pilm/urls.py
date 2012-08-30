@@ -7,9 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'pilm.views.home', name='home'),
-    url(r'^import/$', 'pilm.views.import_files'),
-    url(r'^files/$', 'pilm.views.list_files'),
-    # url(r'^pilm/', include('pilm.foo.urls')),
+    url(r'^files/$', 'pilm.views.file_index'),
+    url(r'^file/new$',                         'pilm.views.file_create'),
+    url(r'^file/edit/(?P<name>[ \S]+)/$',      'pilm.views.file_edit'),
+    url(r'^file/delete/(?P<name>[ \S]+)/$',    'pilm.views.file_delete'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
