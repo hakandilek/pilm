@@ -1,0 +1,18 @@
+{% extends "common/list.html" %}
+{% load i18n %}
+{% block list_row %}
+			<tr class="{% cycle 'row1' 'row2' %}">
+				<td class="noline">{{ object.query }}</td>
+			{% if object.queryStatus == 'N' %}
+				<td class="noline"><a href="{% url pilm.views.query key=object.key%}">query</a></td>
+			{% elif object.queryStatus == "I" %}
+				<td class="noline">...</td>
+			{% elif object.queryStatus == "P" %}
+				<td class="noline">list here</td>
+			{% elif object.queryStatus == "A" %}
+				<td class="noline">ok</td>
+			{% else %}
+				<td class="noline">unknown status</td>
+			{% endif %}
+			</tr>
+{% endblock %}

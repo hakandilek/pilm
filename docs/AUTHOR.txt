@@ -1,0 +1,11 @@
+
+NOTE: see also CONTRIBUTORS.txt for a list of developers of important
+portions of the code and CREDITS.txt for a list of people who
+contributed with hints, patches and so on.
+
+
+AUTHOR: Hakan Dilek
+
+e-mail:		hakan@dilek.me
+IMDbPY page:	https://github.com/hakandilek/pilm/
+
