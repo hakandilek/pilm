@@ -12,7 +12,7 @@
     <div class="form">
         <form action="{% url pilm.views.file_create %}" method="post">
             {% csrf_token %}
-            <div>{% trans "files:" %}<br/><textarea name="files" rows="10" cols="50">.</textarea></div>
+            <div>{% trans "files:" %}<br/><textarea name="files" rows="10" cols="100">.</textarea></div>
             <div><input type="submit" value="{% trans 'Submit' %}"/></div>
         </form>
     </div>

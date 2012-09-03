@@ -8,9 +8,19 @@
 			{% elif object.queryStatus == "I" %}
 				<td class="noline">...</td>
 			{% elif object.queryStatus == "P" %}
-				<td class="noline">list here</td>
+				<td class="noline">
+				{% if object.movies %}
+				<div>
+				<ul>
+					{% for movie in object.get_only_movies %}
+				<li><a href="{% url pilm.views.assign pack_key=object.key movie_key=movie.key %}">{{ movie.title }}</a></li>
+					{% endfor %}
+				</ul>
+				</div>
+				{% endif %}
+				</td>
 			{% elif object.queryStatus == "A" %}
-				<td class="noline">ok</td>
+				<td class="noline"><a  class="ok" href="{% url pilm.views.movie_show key=object.assignedMovie.key %}">{{ object.assignedMovie.title }}</a></td>
 			{% else %}
 				<td class="noline">unknown status</td>
 			{% endif %}

@@ -78,3 +78,5 @@ a.trigger{
 	-webkit-border-bottom-left-radius: 0px;
 	display: block;
 }
+
+a.ok { color:#009900; }

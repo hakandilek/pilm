@@ -142,7 +142,7 @@ LOGGING = {
     },
     'handlers': {
         'default': {
-            'level':'DEBUG',
+            'level':'INFO',
             'class':'logging.StreamHandler',
             'formatter':'standard',
         },  
@@ -159,7 +159,7 @@ LOGGING = {
 
         '': {
             'handlers': ['default'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True
         },
         'django.request': { # Stop SQL debug from logging to main logger

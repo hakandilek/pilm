@@ -21,22 +21,25 @@ class QueryThread(Thread):
             #assign movies into pack
             movielist=[]
             for m in movies:
-                title=m['title']
-                iid=m.movieID
-                log.info("imdbID:%s title:%s" % (iid, title))
-                movie = Movie(title=title, imdbId=iid)
+                log.info("imdbID:%s title:%s" % (m.movieID, m['long imdb title']))
+                log.debug(" keys:%s" % m.keys())
+                rating = m.get('rating')
+                imdbId=m.movieID
+                movie = Movie(imdbId=imdbId, title=m['long imdb title'], year=m['year'], kind=m['kind'], rating=rating)
                 try:
                     movie.save()
+                except IntegrityError as e:
+                    log.info("skip already existing movie: %s - %s" % (movie, e))
+                    movie = Movie.objects.get(imdbId=imdbId)
+                if movie:
                     movielist.append(movie)
-                except IntegrityError:
-                    log.info("skip already existing movie: %s" % movie)
 
             #associate movie & pack
             for movie in movielist:
                 pack.movies.add(movie)
             
             #change status
-            pack.status = 'P'
+            pack.queryStatus = 'P'
             
             #save movie pack
             pack.save()
@@ -49,6 +52,7 @@ class FileImportThread(Thread):
     
     def run(self):
         for name in self.filelist:
+            name = name.rstrip()
             q = refine(name)
             p = Pack(query=q)
             log.debug('name    : %r' % name)
